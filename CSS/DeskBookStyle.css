@@ -1,0 +1,250 @@
+/*@import url('https://fonts.googleapis.com/css?family=Indie+Flower');*/
+/*@import url('https://fonts.googleapis.com/css?family=Overpass+Mono');*/
+/*@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');*/
+/* Подключение внешнего шрифта*/
+
+/*
+@font-face {
+    font-family: IndieFlower; !* Имя шрифта *!
+    src: url(../font/IndieFlower.ttf); !* Путь к файлу со шрифтом *!
+}
+P {
+    font-family: IndieFlower, serif;
+}
+*/
+
+/* Форматируем элемент <div>, который представляет верхний колонтитул
+(как блок с рамкой и синей заливкой). */
+header{
+    background-color: #7695FE;
+    border: thin #1a2699 solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+/* Форматируем все заголовки <h1> в элементе <div>
+верхнего колонтитула (заголовок статьи). */
+body{
+    background-color: #eefeed;
+    border: thin #369993 solid;
+    border-radius: 50px;
+    padding: 30px;
+    margin: 30px;
+    text-align: center;
+}
+
+footer {
+    background-color: #7695FE;
+    border: thin #139919 solid;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+h3{
+    color: aquamarine;
+}
+
+p{ color: #139919}
+
+.New{
+    color: blueviolet;
+}
+p.New{
+    color: #555555;
+}
+h2.darkred{
+    color: blueviolet;
+}
+p.red{
+    color: #ff0e13;
+}
+
+
+ul{
+    color: #ff0e13;
+}
+
+img{
+    border-radius: 10px;
+}
+/* ------------------------------------------------------------------------------------------------------- */
+/* Основной синтаксис CSS*/
+/*
+p{
+    color: red;
+}
+*/
+/* Правила CSS
+селектор { свойство: значение; }
+
+Вы можете прочитать это так:
+
+кто { что: как; }
+CSS представляет собой процесс из трёх частей:
+
+селектор определяет, на какой элемент или элементы нацелиться;
+свойство определяет характеристики для изменения;
+значение определяет, как изменить эту характеристику.
+
+*/
+/* Class */
+.tdBlack{
+    background-color: #000000;
+    color: #ff0e13;
+}
+.tdWhite{
+    background-color: #1a2699;
+}
+
+.olFirst{
+    color: chocolate;
+}
+.ulFirst{
+    color: #139919;
+}
+
+#ulTwo{
+    color: #555555;
+}
+
+/* Идентификаторы */
+#tagline{
+    color: orange;
+}
+
+/* HTML	                               Возможные селекторы	    Что это значит
+<p></p>                                        p	             Каждый <p>
+
+                                               p                 Каждый <p>
+<p class="global"></p>                        .global            Каждый элемент с class=”global”
+                                               p.global          Каждый <p> с class=”global”
+
+<ul id="menu">                                 #menu             Только элемент с id=”menu”
+                                               ul#menu	         Только элемент <ul> с id=”menu”
+
+<ol class="dico">                              li                Каждый <li>
+  <li>Un cobaye</li>                           ol li             Каждый <li> внутри предка <ol>
+  <li>Des cobaux</li>                         .dico li           Каждый <li> внутри предка с class="dico"
+</ol>
+*/
+
+/* Иерархия селекторов */
+/* Пробел в селекторе определяет отношение предок/потомок */
+header h1{
+    margin: 0px;
+    color: white;
+    font-size: xx-large;
+}
+
+/* Псевдоклассы */
+
+a{
+    color: blue;
+}
+
+a:hover {
+    color: black;
+}
+
+a:visited{
+    color:green;
+}
+
+td{
+    width: 30px;
+    height: 80px;
+}
+
+/* Шрифты */
+/*
+Поскольку свойство font-family наследуется всеми дочерними элементами HTML,
+вы можете применить шрифт для всего HTML-документа,
+используя его для предка всех элементов HTML: элемента <body>.
+
+font-family:
+serif — шрифты с засечками (антиквенные), типа Times;
+sans-serif — рубленные шрифты (шрифты без засечек или гротески),
+              типичный представитель — Arial;
+cursive — курсивные шрифты;
+fantasy — декоративные шрифты;
+monospace — моноширинные шрифты,
+         ширина каждого символа в таком семействе одинакова (шрифт Courier).
+inherit  - Наследует значение родителя.
+*/
+body {
+    font-family:  sans-serif;
+}
+/*
+Есть девять надёжных веб-шрифтов:
+
+Arial
+Arial Black
+Comic Sans MS
+Courier New
+Georgia
+Impact
+Times New Roman
+Trebuchet MS
+Verdana
+
+*/
+
+p{
+    /*font-family: 'Overpass Mono', monospace;*/
+    font-family: 'Indie Flower', cursive;
+    /*font-family: 'Bungee Shade', cursive;*/
+    /*font-family: 'Times New Roman', Times, serif;*/
+    /*font-family: Verdana, Arial, Helvetica, sans-serif;*/
+    /*font-size: xx-large;*/
+    /*font-size: 200%;*/
+    /*font-size: 10pt;*/
+    font-weight: 500;
+    font-style: italic;
+    /*font-style: normal;*/
+}
+
+/*
+CSS	 xx-small	x-small	small	medium	large	x-large	xx-large	Нет
+HTML	1	     Нет	  2	       3	  4	       5	   6	     7
+font-size: абсолютный размер | относительный размер | значение | проценты | inherit
+*/
+
+/*
+font-weight: bold|bolder|lighter|normal|100|200|300|400|500|600|700|800|900
+
+Вот как числовые значения влияют на насыщенность шрифта.
+
+100 — тонкое начертание;
+200 — сверхсветлое;
+300 — светлое;
+400 — нормальное (аналогично normal);
+500 — среднее;
+600 — полужирное;
+700 — жирное (аналогично bold);
+800 — сверхжирное;
+900 — тяжёлое.
+*/
+
+/*
+font-style: normal | italic | oblique
+Значения
+
+normal    Обычное начертание текста.
+italic    Курсивное начертание.
+oblique    Наклонное начертание.
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
